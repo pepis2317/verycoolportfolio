@@ -5,6 +5,7 @@ import ContactMe from "./components/ContactMe";
 import DragCarousel from "./components/DragCarousel";
 import Featured from "./components/Featured";
 import PageHeader from "./components/PageHeader";
+import SineWaveDivs from "./components/SineWaveDivs";
 export default function Home() {
 
   return (
@@ -12,16 +13,16 @@ export default function Home() {
       <div className="sticky top-0">
         <PageHeader />
       </div>
-      <div className="sticky top-0">
+      <div className="sticky md:top-0 -top-[400px]">
         <About />
       </div>
       <div className="sticky top-0">
-        <Featured/>
+        <Featured />
       </div>
       <div className="sticky top-0">
-        <ContactMe/>
+        <ContactMe />
       </div>
-      
+
       {/* <Test/> */}
     </main>
   );

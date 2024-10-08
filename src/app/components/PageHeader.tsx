@@ -2,9 +2,10 @@
 import { useState } from "react";
 
 import FollowMouse from "./FollowMouse";
-import WavyBlocks from "./WavyBlocks";
 
-function Trapezoid({color}:{color:string}) {
+import SineWaveDivs from "./SineWaveDivs";
+
+function Trapezoid({ color }: { color: string }) {
     return (
         <svg width="1800" height="1024" viewBox="0 0 1800 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M775.9 0H0.5V1024H1799.9L775.9 0Z" fill={color} />
@@ -41,8 +42,8 @@ export default function PageHeader() {
                 <div className="absolute left-1 top-0">
                     <Trapezoid color={"#FF7528"} />
                 </div>
-                <div className="absolute z-10 -bottom-48 -left-64">
-                    <WavyBlocks />
+                <div className="absolute z-10 -bottom-48 -left-72 rotate-45">
+                    <SineWaveDivs count={7} />
                 </div>
 
             </FollowMouse>

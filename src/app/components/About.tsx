@@ -1,11 +1,12 @@
 'use client'
 import { useState } from "react";
 import Tiles from "./Tiles";
-import FreakyBlocks from "./WavyBlocks";
+
 import Clickable from "./Clickable";
-import WavyBlocks from "./WavyBlocks";
+
 import FollowPerspective from "./FollowPerspective";
 import FollowMouse from "./FollowMouse";
+import SineWaveDivs from "./SineWaveDivs";
 
 export default function About() {
     const [rotate, setRotate] = useState({ x: 0, y: 0 });
@@ -39,21 +40,20 @@ export default function About() {
             <div className=" md:-translate-y-0 -translate-y-[200px] h-full">
                 <FollowMouse multiplier={0.4} offsetX={offsetX} offsetY={offsetY}>
                     <div className="w-[100vw] h-[100vh] relative">
-                        <div className=" absolute rotate-90 -bottom-64 -right-[550px]">
-                            <WavyBlocks />
+                        <div className=" absolute -rotate-45 -bottom-72 -right-[550px]">
+                            <SineWaveDivs count={7} />
                         </div>
                     </div>
                 </FollowMouse>
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:scale-100 scale-90">
                     <FollowPerspective perspective={1000} rotateX={rotate.x} rotateY={rotate.y}>
                         <Tiles />
-                        <img src="/triangleDecor.svg" className="absolute top-0 scale-[115%] pointer-events-none" />
                     </FollowPerspective>
                 </div>
 
                 <div className="w-full h-full absolute top-0 left-0 pointer-events-none md:scale-100 scale-90">
                     <FollowPerspective perspective={500} rotateX={rotate.x} rotateY={rotate.y}>
-                        <img src="/handsome.png" className="w-[500px] relative top-14" />
+                        <img src="/Exclude.png" className="w-[500px] relative top-14 " />
                     </FollowPerspective>
                 </div>
                 <div className="pointer-events-none ">

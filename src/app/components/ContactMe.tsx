@@ -1,7 +1,8 @@
 'use client'
 import { useState } from "react";
 import FollowMouse from "./FollowMouse";
-import WavyBlocks from "./WavyBlocks";
+
+import SineWaveDivs from "./SineWaveDivs";
 function Trapezoid({ color }: { color: string }) {
     return (
         <svg width="1800" height="1024" viewBox="0 0 1800 1024" fill="none" xmlns="http://www.w3.org/2000/svg" className="scale-x-[-1]">
@@ -37,8 +38,8 @@ export default function ContactMe() {
                 <div className="absolute right-1 top-0">
                     <Trapezoid color={"#FF7528"} />
                 </div>
-                <div className="absolute z-10 -bottom-48 -right-64 rotate-90">
-                    <WavyBlocks />
+                <div className="absolute z-10 -bottom-64 -right-64 -rotate-45">
+                    <SineWaveDivs count={7} />
                 </div>
             </FollowMouse>
             <FollowMouse multiplier={1.4} offsetX={offsetX} offsetY={offsetY}>
